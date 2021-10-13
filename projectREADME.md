@@ -31,4 +31,6 @@ ememdaniel98@gmail.com
 N/A
 
 ## Links
+Link to demo video: https://watch.screencastify.com/v/a545UUqphoBC1aQL7Hfq
+Link to demo page: https://github.com/emilyelizabethdaniel/generateREADME/blob/main/Develop/generatedREADME.md
 Link to repo: https://github.com/emilyelizabethdaniel/generateREADME
