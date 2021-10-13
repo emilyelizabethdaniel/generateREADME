@@ -1,7 +1,38 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {
-    return `you chose license ${license}`;
+function renderLicense(license) {
+    let chosenLicense = license;
+    const CCOBadge = "![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)(http://creativecommons.org/publicdomain/zero/1.0/)";
+    const MITBadge = "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)(https://opensource.org/licenses/MIT)"
+    const apacheBadge = "![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)(https://opensource.org/licenses/Apache-2.0)";
+    const IMBBadge = "";
+    const ISCBadge = "";
+    const mozillaBadge = "";
+    const perlBadge = "";
+    const eclipseBadge = "";
+
+
+    if (chosenLicense === 'CCO') {
+        return `${CCOBadge}`
+    } else if (chosenLicense === 'MIT') {
+        return `${MITBadge}`
+    } else if (chosenLicense === 'Apache') {
+        return `${apacheBadge}`
+    } else if (chosenLicense === 'IBM') {
+        return `${IMBBadge}`
+    } else if (chosenLicense === 'ISC') {
+        return `${ISCBadge}`
+    } else if (chosenLicense === 'Mozilla') {
+        return `${mozillaBadge}`
+    } else if (chosenLicense === 'Pearl') {
+        return `${perlBadge}`
+    } else if (chosenLicense === 'Eclipse') {
+        return `${eclipseBadge}`
+
+    } else if (chosenLicense === 'None') {
+        return "";
+    };
+
 };
 
 // TODO: Create a function that returns the license link
@@ -27,14 +58,13 @@ function generateMarkdown(data) {
     var email = data.email;
 
     return `# ${title}
-## Badges
 ![image description or alt text](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
     
 ## Description
 ${description}
 Provide a short description explaining the what, why, and how of your project.
    
-##Table of Contents 
+## Table of Contents 
 ${table}
     
 ## Installation Instructions
@@ -51,15 +81,14 @@ List your collaborators, if any, with links to their GitHub profiles.
 If you used any third-party asset that requir attribution, list the creators with links to their primary web presence in this section.
 If you followed tutorials, include links to those here as well.
 ## License
-${renderLicenseBadge(license)}
-The last section of a high-quality README file is the ${license}.
+${renderLicense(license)}
 
 This lets other developers know what they can and cannot do with your project.
-   
+
 ## Questions
 ${github}
 ${email}
-##Tests
+## Tests
 ${tests}
 `
 }
